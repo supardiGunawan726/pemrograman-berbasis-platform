@@ -6,5 +6,8 @@ names.shift();
 names.unshift("Apple");
 
 console.table(names);
-delete names[1];
+// delete names[1];
+names.splice(2,1);
 console.log(names);
+console.log(names.length);
+
