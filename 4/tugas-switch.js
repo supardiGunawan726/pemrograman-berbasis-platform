@@ -1,21 +1,27 @@
-let nilai = "C";
-let ucapan = null;
+const penjualan = 300_000;
+let uang_jasa;
+let uang_komisi;
 
-switch (nilai) {
-  case "A":
-    ucapan = "Wow anda lulus, hebat";
+// NOTE: sangat tidak umum untuk menggunakan switch case dengan menggunakan operator perbandingan
+switch (true) {
+  case penjualan > 500_000:
+    uang_jasa = 30_000;
+    uang_komisi = 0.2 * penjualan;
     break;
-  case "B":
-    ucapan = "Selamat anda lulus dengan baik";
-    break;
-  case "C":
-    ucapan = "Anda lulus";
-    break;
-  case "D":
-    ucapan = "Anda tidak lulus";
+  case penjualan > 200_000:
+    uang_jasa = 20_000;
+    uang_komisi = 0.15 * penjualan;
     break;
   default:
-    ucapan = "Anda mungkin salah jurusan";
+    uang_jasa = 10_000;
+    uang_komisi = 0.1 * penjualan;
+    break;
 }
 
-console.log(ucapan);
+console.log("PENJUALAN: ", toIDR(penjualan));
+console.log("UANG JASA: ", toIDR(uang_jasa));
+console.log("UANG KOMISI: ", toIDR(uang_komisi));
+
+function toIDR(num) {
+  return num.toLocaleString("id", { style: "currency", currency: "idr" });
+}
