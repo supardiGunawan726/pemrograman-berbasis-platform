@@ -21,6 +21,8 @@ switch (true) {
 console.log("PENJUALAN: ", toIDR(penjualan));
 console.log("UANG JASA: ", toIDR(uang_jasa));
 console.log("UANG KOMISI: ", toIDR(uang_komisi));
+console.log("TOTAL: ", toIDR(uang_jasa + uang_komisi));
+
 
 function toIDR(num) {
   return num.toLocaleString("id", { style: "currency", currency: "idr" });
