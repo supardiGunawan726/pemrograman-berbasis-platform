@@ -3,9 +3,9 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "username" : "khannedy",
+  "username" : "pardi",
   "password" : "rahasia",
-  "name" : "Eko Kurniawan"
+  "name" : "Supardi G"
 }
 
 ###
@@ -15,7 +15,7 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "username" : "khannedy",
+  "username" : "pardi",
   "password" : "rahasia"
 }
 
@@ -24,17 +24,17 @@ Accept: application/json
 GET http://localhost:3000/api/users/current
 Content-Type: application/json
 Accept: application/json
-Authorization: 19dfc22d-4545-45a9-9b36-ec0fc3fee291
+Authorization: 919d829c-64c6-40ce-a79e-288671994c32
 
 ###
 
 PATCH http://localhost:3000/api/users/current
 Content-Type: application/json
 Accept: application/json
-Authorization: 19dfc22d-4545-45a9-9b36-ec0fc3fee291
+Authorization: 919d829c-64c6-40ce-a79e-288671994c32
 
 {
-  "name" : "Eko Kurniawan Khannedy"
+  "name" : "Supardi Ganteng"
 }
 
 ###
@@ -42,14 +42,14 @@ Authorization: 19dfc22d-4545-45a9-9b36-ec0fc3fee291
 DELETE http://localhost:3000/api/users/logout
 Content-Type: application/json
 Accept: application/json
-Authorization: 19dfc22d-4545-45a9-9b36-ec0fc3fee291
+Authorization: 62ccf326-28e0-40ee-8541-096867d9d27f
 
 ###
 
 POST http://localhost:3000/api/contacts
 Content-Type: application/json
 Accept: application/json
-Authorization: 19dfc22d-4545-45a9-9b36-ec0fc3fee291
+Authorization: 919d829c-64c6-40ce-a79e-288671994c32
 
 {
   "first_name" : "Joko",
@@ -63,14 +63,14 @@ Authorization: 19dfc22d-4545-45a9-9b36-ec0fc3fee291
 GET http://localhost:3000/api/contacts
 Content-Type: application/json
 Accept: application/json
-Authorization: 19dfc22d-4545-45a9-9b36-ec0fc3fee291
+Authorization: 919d829c-64c6-40ce-a79e-288671994c32
 
 ###
 
 GET http://localhost:3000/api/contacts/317
 Content-Type: application/json
 Accept: application/json
-Authorization: 19dfc22d-4545-45a9-9b36-ec0fc3fee291
+Authorization: 919d829c-64c6-40ce-a79e-288671994c32
 
 ### Update
 
