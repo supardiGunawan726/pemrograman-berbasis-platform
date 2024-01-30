@@ -1,0 +1,164 @@
+POST http://localhost:3000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "supardi",
+  "password" : "rahasia",
+  "name" : "Supardi G"
+}
+
+###
+
+POST http://loalhost:3000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "supardi",
+  "password" : "rahasia"
+}
+
+###
+
+GET http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 1224ccbb-c9f6-4d62-8058-75d7a9a44a71
+
+###
+
+PATCH http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 1224ccbb-c9f6-4d62-8058-75d7a9a44a71
+
+{
+  "name" : "Supardi baik"
+}
+
+###
+
+DELETE http://localhost:3000/api/users/logout
+Content-Type: application/json
+Accept: application/json
+Authorization: c620be3d-fe77-4cf2-8a27-6b08e7bba952
+
+### CREATE POST
+
+POST http://localhost:3000/api/posts
+Content-Type: application/json
+Accept: application/json
+Authorization: acab4b9d-4b1a-46a2-af9f-c0744dfb5a3b
+
+{
+  "slug": "framework-css",
+  "title": "Framework css",
+  "summary": "Membahas bagaimana membuat API dengan framework css",
+  "content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, saepe provident aliquam in animi magni, cumque ut reprehenderit dignissimos error deserunt similique repellendus iste natus possimus necessitatibus, asperiores doloribus quibusdam?"
+}
+
+### GET POST
+
+GET http://localhost:3000/api/posts/acab4b9d-4b1a-46a2-af9f-c0744dfb5a3b
+Content-Type: application/json
+Accept: application/json
+
+### UPDATE POST
+
+PUT http://localhost:3000/api/posts/acab4b9d-4b1a-46a2-af9f-c0744dfb5a3b
+Content-Type: application/json
+Accept: application/json
+Authorization: 1224ccbb-c9f6-4d62-8058-75d7a9a44a71
+
+{
+  "slug": "framework-css-edited",
+  "title": "Framework css edited",
+  "summary": "Membahas bagaimana membuat API dengan framework express.js",
+  "content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, saepe provident aliquam in animi magni, cumque ut reprehenderit dignissimos error deserunt similique repellendus iste natus possimus necessitatibus, asperiores doloribus quibusdam?"
+}
+
+### DELETE POST
+
+DELETE  http://localhost:3000/api/posts/acab4b9d-4b1a-46a2-af9f-c0744dfb5a3b
+Content-Type: application/json
+Accept: application/json
+Authorization: 1224ccbb-c9f6-4d62-8058-75d7a9a44a71
+
+### SEARCH POSTS WITHOUT QUERY
+
+GET http://localhost:3000/api/posts
+Content-Type: application/json
+Accept: application/json
+
+### SEARCH POSTS WITH SLUG
+
+GET http://localhost:3000/api/posts?slug=framework-expressjs
+Content-Type: application/json
+Accept: application/json
+
+### SEARCH POSTS WITH TITLE
+
+GET http://localhost:3000/api/posts?title=Framework express.js
+Content-Type: application/json
+Accept: application/json
+
+### SEARCH POSTS WITH SUMMARY
+
+GET http://localhost:3000/api/posts?summary=Membahas
+Content-Type: application/json
+Accept: application/json
+
+### SEARCH POSTS WITH CONTENT
+
+GET http://localhost:3000/api/posts?content=lorem
+Content-Type: application/json
+Accept: application/json
+
+### SEARCH POSTS WITH AUTHORID
+
+GET http://localhost:3000/api/posts?authorId=pardi
+Content-Type: application/json
+Accept: application/json
+
+### CREATE COMMENT
+
+POST http://localhost:3000/api/posts/2981aca8-d3cb-45eb-8c0f-d0da9e57565f/comments
+Content-Type: application/json
+Accept: application/json
+Authorization: c620be3d-fe77-4cf2-8a27-6b08e7bba952
+
+{
+  "username": "pardi",
+  "message": "test comment"
+}
+
+### GET COMMENT
+
+GET http://localhost:3000/api/posts/2981aca8-d3cb-45eb-8c0f-d0da9e57565f/comments/78017fa4-43f4-4352-8e9a-bd64081c1963
+Content-Type: application/json
+Accept: application/json
+
+### UPDATE COMMENT
+
+PUT http://localhost:3000/api/posts/2981aca8-d3cb-45eb-8c0f-d0da9e57565f/comments/78017fa4-43f4-4352-8e9a-bd64081c1963
+Content-Type: application/json
+Accept: application/json
+Authorization: c620be3d-fe77-4cf2-8a27-6b08e7bba952
+
+{
+  "message": "test comment edited"
+}
+
+### DELETE COMMENT
+
+DELETE http://localhost:3000/api/posts/2981aca8-d3cb-45eb-8c0f-d0da9e57565f/comments/78017fa4-43f4-4352-8e9a-bd64081c1963
+Content-Type: application/json
+Accept: application/json
+Authorization: c620be3d-fe77-4cf2-8a27-6b08e7bba952
+
+### LIST COMMENT
+
+GET http://localhost:3000/api/posts/2981aca8-d3cb-45eb-8c0f-d0da9e57565f/comments
+Content-Type: application/json
+Accept: application/json
