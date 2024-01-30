@@ -1,0 +1,19 @@
+### GET ALL MAHASISWA
+GET http://localhost:3000/mahasiswa
+
+###
+
+GET http://localhost:3000/mahasiswa/20220040084
+
+###
+
+PUT http://localhost:3000/mahasiswa/20220040085
+Content-Type: application/json
+Accept: application/json
+
+{
+  "nama": "Widhi Pebrianti",
+  "gender": "P",
+  "prodi": "TI",
+  "alamat": "Cianjur"
+}
